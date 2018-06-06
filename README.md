@@ -3,3 +3,16 @@
 包含 JUnit 测试代码。
 
 对代码的详细说明请参考：[算法](https://github.com/CyC2018/Interview-Notebook/blob/master/notes/%E7%AE%97%E6%B3%95.md)
+
+以下是实现计划列表，欢迎补充
+
+- [x] ThreeSum
+- [x] 二分查找
+- [x] 栈
+- [x] 队列
+- [ ] 排序算法
+- [ ] Union-Find
+- [ ] 红黑树
+- [ ] 散列表
+- [ ] LRU
+- [ ] 哈夫曼编码
