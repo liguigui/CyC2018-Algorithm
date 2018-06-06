@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/Queue/Queue.iml" filepath="$PROJECT_DIR$/Queue/Queue.iml" />
       <module fileurl="file://$PROJECT_DIR$/Stack/Stack.iml" filepath="$PROJECT_DIR$/Stack/Stack.iml" />
       <module fileurl="file://$PROJECT_DIR$/ThreeSum/ThreeSum.iml" filepath="$PROJECT_DIR$/ThreeSum/ThreeSum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Union-Find/Union-Find.iml" filepath="$PROJECT_DIR$/Union-Find/Union-Find.iml" />
     </modules>
   </component>
 </project>
