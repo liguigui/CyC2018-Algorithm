@@ -1,7 +1,8 @@
 import java.util.Arrays;
 
-public class ThreeSumFast {
-    public static int count(int[] nums) {
+public class ThreeSumFast implements ThreeSum {
+    @Override
+    public int count(int[] nums) {
         Arrays.sort(nums);
         int N = nums.length;
         int cnt = 0;

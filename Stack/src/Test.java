@@ -4,7 +4,7 @@ public class Test {
 
     @org.junit.Test
     public void ResizingArrayStackTest() throws Exception {
-        test(new ResizingArrayStack<>());
+        test(new ArrayStack<>());
     }
 
     @org.junit.Test

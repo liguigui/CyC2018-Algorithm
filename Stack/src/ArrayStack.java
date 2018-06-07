@@ -3,9 +3,9 @@ import java.util.Iterator;
 /**
  * 使用数组实现的可以动态调整大小的栈
  */
-public class ResizingArrayStack<Item> implements MyStack<Item> {
-    // 栈元素数组
-    private Item[] a = (Item[]) new Object[1]; // 只能通过转型来创建泛型数组
+public class ArrayStack<Item> implements MyStack<Item> {
+    // 栈元素数组，只能通过转型来创建泛型数组
+    private Item[] a = (Item[]) new Object[1];
     // 元素数量
     private int N = 0;
 

@@ -7,11 +7,15 @@ public class Test {
 
     @org.junit.Test
     public void ThreeSumTest() {
-        Assert.assertEquals(ThreeSum.count(nums), expect);
+        test(new ThreeSumSlow());
     }
 
     @org.junit.Test
     public void ThreeSumFastTest() {
-        Assert.assertEquals(ThreeSumFast.count(nums), expect);
+        test(new ThreeSumFast());
+    }
+
+    private void test(ThreeSum threeSum) {
+        Assert.assertEquals(threeSum.count(nums), expect);
     }
 }

@@ -9,7 +9,8 @@ public class RatioTest {
         while (loopTimes-- > 0) {
             int[] nums = new int[N];
             StopWatch.start();
-            int cnt = ThreeSum.count(nums);
+            ThreeSum threeSum = new ThreeSumSlow();
+            int cnt = threeSum.count(nums);
             System.out.println(cnt);
             double elapsedTime = StopWatch.elapsedTime();
             double ratio = preTime == -1 ? 0 : elapsedTime / preTime;
