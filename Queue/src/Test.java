@@ -9,10 +9,10 @@ public class Test {
             System.out.println(item);
         Assert.assertEquals(queue.size(), 4);
         Assert.assertFalse(queue.isEmpty());
-        Assert.assertTrue(queue.remove() == 1);
-        Assert.assertTrue(queue.remove() == 2);
-        Assert.assertTrue(queue.remove() == 3);
-        Assert.assertTrue(queue.remove() == 4);
+        Assert.assertEquals(1, (int) queue.remove());
+        Assert.assertEquals(2, (int) queue.remove());
+        Assert.assertEquals(3, (int) queue.remove());
+        Assert.assertEquals(4, (int) queue.remove());
         Assert.assertTrue(queue.isEmpty());
     }
 }
