@@ -9,7 +9,7 @@
 | ---- Hanoi                         // 汉诺塔
 | ---- Fuffman                       // 哈夫曼编码
 | Process-Scheduling
-| ---- FCFS                          // 先进先服务调度算法
+| ---- FCFS                          // 先来先服务调度算法
 | ---- SJF                           // 最短进程优先调度算法
 | Queue                              // 队列
 | Searching
