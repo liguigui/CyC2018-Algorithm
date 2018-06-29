@@ -1,21 +1,25 @@
 import org.junit.Assert;
 
-public class Test {
+public class Test
+{
 
     private final int[] nums = {-2, -1, 0, 1, 2};
     private final int expect = 2;
 
     @org.junit.Test
-    public void ThreeSumTest() {
+    public void ThreeSumTest()
+    {
         test(new ThreeSumSlow());
     }
 
     @org.junit.Test
-    public void ThreeSumFastTest() {
+    public void ThreeSumFastTest()
+    {
         test(new ThreeSumFast());
     }
 
-    private void test(ThreeSum threeSum) {
+    private void test(ThreeSum threeSum)
+    {
         Assert.assertEquals(threeSum.count(nums), expect);
     }
 }

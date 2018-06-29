@@ -1,15 +1,17 @@
 package UnorderedST;
 
-public class ListUnorderedST<Key, Value> implements UnorderedST<Key, Value> {
-
+public class ListUnorderedST<Key, Value> implements UnorderedST<Key, Value>
+{
     private Node first;
 
-    private class Node {
+    private class Node
+    {
         Key key;
         Value value;
         Node next;
 
-        Node(Key key, Value value, Node next) {
+        Node(Key key, Value value, Node next)
+        {
             this.key = key;
             this.value = value;
             this.next = next;
@@ -17,7 +19,8 @@ public class ListUnorderedST<Key, Value> implements UnorderedST<Key, Value> {
     }
 
     @Override
-    public int size() {
+    public int size()
+    {
         int cnt = 0;
         Node cur = first;
         while (cur != null) {
@@ -28,7 +31,8 @@ public class ListUnorderedST<Key, Value> implements UnorderedST<Key, Value> {
     }
 
     @Override
-    public void put(Key key, Value value) {
+    public void put(Key key, Value value)
+    {
         Node cur = first;
         // 如果在链表中找到节点的键等于 key 就更新这个节点的值为 value
         while (cur != null) {
@@ -43,11 +47,14 @@ public class ListUnorderedST<Key, Value> implements UnorderedST<Key, Value> {
     }
 
     @Override
-    public void delete(Key key) {
-        if (first == null)
+    public void delete(Key key)
+    {
+        if (first == null) {
             return;
-        if (first.key.equals(key))
+        }
+        if (first.key.equals(key)) {
             first = first.next;
+        }
         Node pre = first, cur = first.next;
         while (cur != null) {
             if (cur.key.equals(key)) {
@@ -60,11 +67,13 @@ public class ListUnorderedST<Key, Value> implements UnorderedST<Key, Value> {
     }
 
     @Override
-    public Value get(Key key) {
+    public Value get(Key key)
+    {
         Node cur = first;
         while (cur != null) {
-            if (cur.key.equals(key))
+            if (cur.key.equals(key)) {
                 return cur.value;
+            }
             cur = cur.next;
         }
         return null;

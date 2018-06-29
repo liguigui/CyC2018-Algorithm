@@ -1,12 +1,15 @@
 import org.junit.Assert;
 
-public class Test {
+public class Test
+{
     @org.junit.Test
-    public void ListStackTest() throws Exception {
+    public void ListStackTest() throws Exception
+    {
         MyQueue<Integer> queue = new ListQueue<>();
         queue.add(1).add(2).add(3).add(4);
-        for (Integer item : queue)
+        for (Integer item : queue) {
             System.out.println(item);
+        }
         Assert.assertEquals(queue.size(), 4);
         Assert.assertFalse(queue.isEmpty());
         Assert.assertEquals(1, (int) queue.remove());

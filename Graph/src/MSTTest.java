@@ -3,13 +3,15 @@ import org.junit.Assert;
 import java.util.HashSet;
 import java.util.Set;
 
-public class MSTTest {
+public class MSTTest
+{
 
     private EdgeWeighGraph graph;
     private Set<Edge> expect;
 
     @org.junit.Before
-    public void data() {
+    public void data()
+    {
         Edge edge1 = new Edge(0, 1, 1.0);
         Edge edge2 = new Edge(1, 2, 2.0);
         Edge edge3 = new Edge(2, 3, 3.0);
@@ -30,16 +32,19 @@ public class MSTTest {
     }
 
     @org.junit.Test
-    public void testPrimMST() {
+    public void testPrimMST()
+    {
         test(new PrimMST(graph));
     }
 
     @org.junit.Test
-    public void testKruskalMST() {
+    public void testKruskalMST()
+    {
         test(new KruskalMST(graph));
     }
 
-    private void test(MST mst) {
+    private void test(MST mst)
+    {
         Set<Edge> result = mst.getResult();
         Assert.assertEquals(result.size(), expect.size());
         for (Edge edge : result) {

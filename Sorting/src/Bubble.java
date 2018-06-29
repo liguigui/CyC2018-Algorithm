@@ -1,6 +1,8 @@
-public class Bubble<T extends Comparable<T>> extends Sort<T> {
+public class Bubble<T extends Comparable<T>> extends Sort<T>
+{
     @Override
-    public void sort(T[] nums) {
+    public void sort(T[] nums)
+    {
         int N = nums.length;
         boolean hasSorted = false;
         for (int i = 0; i < N && !hasSorted; i++) {

@@ -1,5 +1,7 @@
-public class Hanoi {
-    public static void move(int n, String from, String buffer, String to) {
+public class Hanoi
+{
+    public static void move(int n, String from, String buffer, String to)
+    {
         if (n == 1) {
             System.out.println("from " + from + " to " + to);
             return;
@@ -9,7 +11,8 @@ public class Hanoi {
         move(n - 1, buffer, from, to);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         Hanoi.move(3, "H1", "H2", "H3");
     }
 }

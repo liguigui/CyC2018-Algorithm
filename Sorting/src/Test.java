@@ -1,7 +1,7 @@
 import org.junit.Assert;
 
-public class Test {
-
+public class Test
+{
     private Integer[][] numsBefore = {
             {1, 2, 3},
             {3, 2, 1},
@@ -19,46 +19,55 @@ public class Test {
     };
 
     @org.junit.Test
-    public void SelectionTest() {
+    public void SelectionTest()
+    {
         test(new Selection<>());
     }
 
     @org.junit.Test
-    public void BubbleTest() {
+    public void BubbleTest()
+    {
         test(new Bubble<>());
     }
 
     @org.junit.Test
-    public void InsertionTest() {
+    public void InsertionTest()
+    {
         test(new Insertion<>());
     }
 
     @org.junit.Test
-    public void ShellTest() {
+    public void ShellTest()
+    {
         test(new Shell<>());
     }
 
     @org.junit.Test
-    public void Up2DownMergeSortTest() {
+    public void Up2DownMergeSortTest()
+    {
         test(new Up2DownMergeSort<>());
     }
 
     @org.junit.Test
-    public void Down2UpMergeSortTest() {
+    public void Down2UpMergeSortTest()
+    {
         test(new Down2UpMergeSort<>());
     }
 
     @org.junit.Test
-    public void QuickSortTest() {
+    public void QuickSortTest()
+    {
         test(new QuickSort<>());
     }
 
     @org.junit.Test
-    public void ThreeWayQuickSortTest() {
+    public void ThreeWayQuickSortTest()
+    {
         test(new ThreeWayQuickSort<>());
     }
 
-    private void test(Sort<Integer> sort) {
+    private void test(Sort<Integer> sort)
+    {
         for (int i = 0; i < numsBefore.length; i++) {
             sort.sort(numsBefore[i]);
             Assert.assertArrayEquals(numsBefore[i], numsAfter[i]);

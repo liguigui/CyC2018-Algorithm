@@ -1,25 +1,29 @@
 import org.junit.Assert;
 
-public class Test {
-
+public class Test
+{
     private final int N = 10;
 
     @org.junit.Test
-    public void QuickFindUFTest() {
+    public void QuickFindUFTest()
+    {
         test(new QuickFindUF(N));
     }
 
     @org.junit.Test
-    public void QuickUnionUFTest() {
+    public void QuickUnionUFTest()
+    {
         test(new QuickUnionUF(N));
     }
 
     @org.junit.Test
-    public void WeightedQuickUnionUFTest() {
+    public void WeightedQuickUnionUFTest()
+    {
         test(new WeightedQuickUnionUF(N));
     }
 
-    private void test(UF uf) {
+    private void test(UF uf)
+    {
         uf.union(0, 1);
         Assert.assertTrue(uf.connected(0, 1));
         Assert.assertFalse(uf.connected(0, 2));

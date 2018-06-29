@@ -3,40 +3,45 @@ package OrderedST;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BinarySearchOrderedST<Key extends Comparable<Key>, Value> implements OrderedST<Key, Value> {
-
+public class BinarySearchOrderedST<Key extends Comparable<Key>, Value> implements OrderedST<Key, Value>
+{
     private Key[] keys;
     private Value[] values;
     private int N = 0;
 
-    public BinarySearchOrderedST(int capacity) {
+    public BinarySearchOrderedST(int capacity)
+    {
         keys = (Key[]) new Comparable[capacity];
         values = (Value[]) new Object[capacity];
     }
 
     @Override
-    public int size() {
+    public int size()
+    {
         return N;
     }
 
     @Override
-    public int rank(Key key) {
+    public int rank(Key key)
+    {
         int l = 0, h = N - 1;
         while (l <= h) {
             int m = l + (h - l) / 2;
             int cmp = key.compareTo(keys[m]);
-            if (cmp == 0)
+            if (cmp == 0) {
                 return m;
-            else if (cmp < 0)
+            } else if (cmp < 0) {
                 h = m - 1;
-            else
+            } else {
                 l = m + 1;
+            }
         }
         return l;
     }
 
     @Override
-    public List<Key> keys(Key l, Key h) {
+    public List<Key> keys(Key l, Key h)
+    {
         int index = rank(l);
         List<Key> list = new ArrayList<>();
         while (keys[index].compareTo(h) <= 0) {
@@ -47,7 +52,8 @@ public class BinarySearchOrderedST<Key extends Comparable<Key>, Value> implement
     }
 
     @Override
-    public void put(Key key, Value value) {
+    public void put(Key key, Value value)
+    {
         int index = rank(key);
         // 如果找到已经存在的节点键位 key，就更新这个节点的值为 value
         if (index < N && keys[index].compareTo(key) == 0) {
@@ -65,20 +71,24 @@ public class BinarySearchOrderedST<Key extends Comparable<Key>, Value> implement
     }
 
     @Override
-    public Value get(Key key) {
+    public Value get(Key key)
+    {
         int index = rank(key);
-        if (index < N && keys[index].compareTo(key) == 0)
+        if (index < N && keys[index].compareTo(key) == 0) {
             return values[index];
+        }
         return null;
     }
 
     @Override
-    public Key min() {
+    public Key min()
+    {
         return keys[0];
     }
 
     @Override
-    public Key max() {
+    public Key max()
+    {
         return keys[N - 1];
     }
 }

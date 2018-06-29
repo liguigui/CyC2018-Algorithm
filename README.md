@@ -5,16 +5,18 @@
 对代码的详细说明请参考：[算法](https://github.com/CyC2018/Interview-Notebook/blob/master/notes/%E7%AE%97%E6%B3%95.md)
 
 ```
+| Caching
+| ---- LRU                           // LRU 缓存淘汰算法
 | Graph
 | ---- KruskalMST                    // Kruskal 最小生成树
 | ---- PrimMST                       // Prim 最小生成树
 | Other
 | ---- Hanoi                         // 汉诺塔
 | ---- Huffman                       // 哈夫曼编码
-| Process-Scheduling
+| Queue                              // 队列
+| Scheduling
 | ---- FCFS                          // 先来先服务调度算法
 | ---- SJF                           // 最短进程优先调度算法
-| Queue                              // 队列
 | Searching
 | ---- OrderedST
 | -------- BinarySearchOrderedST     // 二分查找实现的有序符号表

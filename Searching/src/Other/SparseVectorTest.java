@@ -3,10 +3,11 @@ package Other;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class SparseVectorTest {
-
+public class SparseVectorTest
+{
     @Test
-    public void dot() throws Exception {
+    public void dot()
+    {
         double[] vector1 = {1, 0, 0, 0, 1, 0};
         double[] vector2 = {0, 0, 1, 1, 1, 0};
         SparseVector sparseVector1 = new SparseVector(vector1);

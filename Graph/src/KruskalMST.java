@@ -3,11 +3,13 @@ import java.util.HashSet;
 import java.util.PriorityQueue;
 import java.util.Set;
 
-public class KruskalMST extends MST {
+public class KruskalMST extends MST
+{
 
     private Set<Edge> mst;
 
-    public KruskalMST(EdgeWeighGraph graph) {
+    public KruskalMST(EdgeWeighGraph graph)
+    {
         super(graph);
         mst = new HashSet<>();
         PriorityQueue<Edge> pq = new PriorityQueue<>(Comparator.comparing(Edge::getWeight));
@@ -25,7 +27,8 @@ public class KruskalMST extends MST {
     }
 
     @Override
-    public Set<Edge> getResult() {
+    public Set<Edge> getResult()
+    {
         return mst;
     }
 

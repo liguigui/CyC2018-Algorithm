@@ -3,12 +3,14 @@ import java.util.HashSet;
 import java.util.PriorityQueue;
 import java.util.Set;
 
-public class PrimMST extends MST {
+public class PrimMST extends MST
+{
     private boolean[] marked;
-    private PriorityQueue<Edge> pq; // 横切边
-    private Set<Edge> mst;          // 最小生成树的边
+    private PriorityQueue<Edge> pq;  // 横切边
+    private Set<Edge> mst;           // 最小生成树的边
 
-    public PrimMST(EdgeWeighGraph graph) {
+    public PrimMST(EdgeWeighGraph graph)
+    {
         super(graph);
         marked = new boolean[graph.getV()];
         pq = new PriorityQueue<>(Comparator.comparingDouble((Edge o) -> (o.getWeight())));
@@ -31,11 +33,13 @@ public class PrimMST extends MST {
     }
 
     @Override
-    public Set<Edge> getResult() {
+    public Set<Edge> getResult()
+    {
         return mst;
     }
 
-    private void visit(int v) {
+    private void visit(int v)
+    {
         marked[v] = true;
         for (Edge edge : graph.adj(v)) {
             if (!marked[edge.getOther(v)]) {

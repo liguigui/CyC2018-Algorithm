@@ -1,13 +1,16 @@
-public class ProcessComeEmulator extends Thread {
+public class ProcessComeEmulator extends Thread
+{
 
     private ProcessQueue processQueue;
 
-    public ProcessComeEmulator(ProcessQueue processQueue) {
+    public ProcessComeEmulator(ProcessQueue processQueue)
+    {
         this.processQueue = processQueue;
     }
 
     @Override
-    public void run() {
+    public void run()
+    {
         int processId = 0;
         while (true) {
             System.out.println("process " + processId + " is coming...");
@@ -22,7 +25,8 @@ public class ProcessComeEmulator extends Thread {
         }
     }
 
-    private long getRandomTime() {
+    private long getRandomTime()
+    {
         return (long) (Math.random() * 3000);
     }
 }

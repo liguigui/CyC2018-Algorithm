@@ -2,21 +2,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
 
-public class Huffman {
+public class Huffman
+{
 
-    private class Node implements Comparable<Node> {
+    private class Node implements Comparable<Node>
+    {
         char ch;
         int freq;
         boolean isLeaf;
         Node left, right;
 
-        public Node(char ch, int freq) {
+        public Node(char ch, int freq)
+        {
             this.ch = ch;
             this.freq = freq;
             isLeaf = true;
         }
 
-        public Node(Node left, Node right, int freq) {
+        public Node(Node left, Node right, int freq)
+        {
             this.left = left;
             this.right = right;
             this.freq = freq;
@@ -24,12 +28,14 @@ public class Huffman {
         }
 
         @Override
-        public int compareTo(Node o) {
+        public int compareTo(Node o)
+        {
             return this.freq - o.freq;
         }
     }
 
-    public Map<Character, String> encode(Map<Character, Integer> frequencyForChar) {
+    public Map<Character, String> encode(Map<Character, Integer> frequencyForChar)
+    {
         PriorityQueue<Node> priorityQueue = new PriorityQueue<>();
         for (Character c : frequencyForChar.keySet()) {
             priorityQueue.add(new Node(c, frequencyForChar.get(c)));
@@ -42,13 +48,15 @@ public class Huffman {
         return encode(priorityQueue.poll());
     }
 
-    private Map<Character, String> encode(Node root) {
+    private Map<Character, String> encode(Node root)
+    {
         Map<Character, String> encodingForChar = new HashMap<>();
         encode(root, "", encodingForChar);
         return encodingForChar;
     }
 
-    private void encode(Node node, String encoding, Map<Character, String> encodingForChar) {
+    private void encode(Node node, String encoding, Map<Character, String> encodingForChar)
+    {
         if (node.isLeaf) {
             encodingForChar.put(node.ch, encoding);
             return;

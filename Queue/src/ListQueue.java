@@ -1,27 +1,32 @@
 import java.util.Iterator;
 
-public class ListQueue<Item> implements MyQueue<Item> {
+public class ListQueue<Item> implements MyQueue<Item>
+{
     private Node first;
     private Node last;
     int N = 0;
 
-    private class Node {
+    private class Node
+    {
         Item item;
         Node next;
     }
 
     @Override
-    public boolean isEmpty() {
+    public boolean isEmpty()
+    {
         return N == 0;
     }
 
     @Override
-    public int size() {
+    public int size()
+    {
         return N;
     }
 
     @Override
-    public MyQueue<Item> add(Item item) {
+    public MyQueue<Item> add(Item item)
+    {
         Node newNode = new Node();
         newNode.item = item;
         newNode.next = null;
@@ -37,29 +42,36 @@ public class ListQueue<Item> implements MyQueue<Item> {
     }
 
     @Override
-    public Item remove() throws Exception {
-        if (isEmpty())
+    public Item remove() throws Exception
+    {
+        if (isEmpty()) {
             throw new Exception("queue is empty");
+        }
         Node node = first;
         first = first.next;
         N--;
-        if (isEmpty())
+        if (isEmpty()) {
             last = null;
+        }
         return node.item;
     }
 
     @Override
-    public Iterator<Item> iterator() {
-        return new Iterator<Item>() {
+    public Iterator<Item> iterator()
+    {
+        return new Iterator<Item>()
+        {
             Node cur = first;
 
             @Override
-            public boolean hasNext() {
+            public boolean hasNext()
+            {
                 return cur != null;
             }
 
             @Override
-            public Item next() {
+            public Item next()
+            {
                 Item item = cur.item;
                 cur = cur.next;
                 return item;

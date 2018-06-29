@@ -1,5 +1,7 @@
 import org.junit.Assert;
 
+import static org.junit.Assert.assertTrue;
+
 public class Test {
 
     @org.junit.Test
@@ -16,12 +18,13 @@ public class Test {
         stack.push(1).push(2).push(3).push(4);
         Assert.assertEquals(stack.size(), 4);
         Assert.assertFalse(stack.isEmpty());
-        for (Integer item : stack)
+        for (Integer item : stack) {
             System.out.println(item);
-        Assert.assertTrue(stack.pop() == 4);
-        Assert.assertTrue(stack.pop() == 3);
-        Assert.assertTrue(stack.pop() == 2);
-        Assert.assertTrue(stack.pop() == 1);
-        Assert.assertTrue(stack.isEmpty());
+        }
+        Assert.assertEquals(4, (int) stack.pop());
+        Assert.assertEquals(3, (int) stack.pop());
+        Assert.assertEquals(2, (int) stack.pop());
+        Assert.assertEquals(1, (int) stack.pop());
+        assertTrue(stack.isEmpty());
     }
 }

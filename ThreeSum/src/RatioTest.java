@@ -1,8 +1,10 @@
 /**
  * 倍率实验
  */
-public class RatioTest {
-    public static void main(String[] args) {
+public class RatioTest
+{
+    public static void main(String[] args)
+    {
         int N = 500;
         int loopTimes = 7;
         double preTime = -1;
