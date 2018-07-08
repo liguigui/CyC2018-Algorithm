@@ -16,6 +16,7 @@ public class LRUTest
         lru.get("K1");
         lru.get("K2");
         lru.put("K4", "V4");
+
         Iterator iterator = lru.iterator();
 
         assertEquals(iterator.next(), "K4");
