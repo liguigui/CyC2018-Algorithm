@@ -10,6 +10,8 @@
 | Graph
 | ---- KruskalMST                    // Kruskal 最小生成树
 | ---- PrimMST                       // Prim 最小生成树
+| MultiThreading
+| ---- AlternatePrint                // 多线程交替打印
 | Other
 | ---- Hanoi                         // 汉诺塔
 | ---- Huffman                       // 哈夫曼编码
