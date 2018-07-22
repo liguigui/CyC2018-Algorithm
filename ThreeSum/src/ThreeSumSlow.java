@@ -1,8 +1,7 @@
-public class ThreeSumSlow implements ThreeSum
-{
+public class ThreeSumSlow implements ThreeSum {
+
     @Override
-    public int count(int[] nums)
-    {
+    public int count(int[] nums) {
         int N = nums.length;
         int cnt = 0;
         for (int i = 0; i < N; i++) {

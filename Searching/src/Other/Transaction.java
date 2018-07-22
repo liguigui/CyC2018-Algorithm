@@ -5,21 +5,21 @@ import java.util.Date;
 /**
  * 交易类，用于演示 hashCode() 实现
  */
-public class Transaction
-{
+public class Transaction {
+
     private final String who;
     private final Date when;
     private final double amount;
 
-    public Transaction(String who, Date when, double amount)
-    {
+
+    public Transaction(String who, Date when, double amount) {
         this.who = who;
         this.when = when;
         this.amount = amount;
     }
 
-    public int hashCode()
-    {
+
+    public int hashCode() {
         int hash = 17;
         int R = 31;
         hash = R * hash + who.hashCode();

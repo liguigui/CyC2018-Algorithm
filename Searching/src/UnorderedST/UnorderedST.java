@@ -1,7 +1,7 @@
 package UnorderedST;
 
-public interface UnorderedST<Key, Value>
-{
+public interface UnorderedST<Key, Value> {
+
     int size();
 
     Value get(Key key);

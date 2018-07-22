@@ -1,5 +1,5 @@
-public interface ProcessQueue
-{
+public interface ProcessQueue {
+
     void add(Process process);
 
     Process get();

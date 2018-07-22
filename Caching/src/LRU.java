@@ -1,21 +1,7 @@
 import java.util.HashMap;
 import java.util.Iterator;
 
-public class LRU<K, V> implements Iterable<K>
-{
-    private class Node
-    {
-        Node pre;
-        Node next;
-        K k;
-        V v;
-
-        public Node(K k, V v)
-        {
-            this.k = k;
-            this.v = v;
-        }
-    }
+public class LRU<K, V> implements Iterable<K> {
 
     private Node head;
     private Node tail;
@@ -24,18 +10,37 @@ public class LRU<K, V> implements Iterable<K>
 
     private int maxSize;
 
-    public LRU(int maxSize)
-    {
+
+    private class Node {
+
+        Node pre;
+        Node next;
+        K k;
+        V v;
+
+        public Node(K k, V v) {
+            this.k = k;
+            this.v = v;
+        }
+
+    }
+
+
+    public LRU(int maxSize) {
+
         this.maxSize = maxSize;
         this.map = new HashMap<>(maxSize * 4 / 3);
+
         head = new Node(null, null);
         tail = new Node(null, null);
+
         head.next = tail;
         tail.pre = head;
     }
 
-    public V get(K key)
-    {
+
+    public V get(K key) {
+
         if (!map.containsKey(key)) {
             return null;
         }
@@ -47,8 +52,9 @@ public class LRU<K, V> implements Iterable<K>
         return node.v;
     }
 
-    public void put(K key, V value)
-    {
+
+    public void put(K key, V value) {
+
         if (map.containsKey(key)) {
             Node node = map.get(key);
             unlink(node);
@@ -64,42 +70,40 @@ public class LRU<K, V> implements Iterable<K>
         }
     }
 
-    private void unlink(Node node)
-    {
+    private void unlink(Node node) {
         Node pre = node.pre;
         node.pre = node.next;
         node.next = pre;
     }
 
-    private void appendHead(Node node)
-    {
+
+    private void appendHead(Node node) {
         node.next = head.next;
         head.next = node;
     }
 
-    private Node removeTail()
-    {
+
+    private Node removeTail() {
         Node node = tail.pre;
         node.pre = tail;
         return node;
     }
 
+
     @Override
-    public Iterator<K> iterator()
-    {
-        return new Iterator<K>()
-        {
+    public Iterator<K> iterator() {
+
+        return new Iterator<K>() {
+
             private Node cur = head.next;
 
             @Override
-            public boolean hasNext()
-            {
+            public boolean hasNext() {
                 return cur != tail;
             }
 
             @Override
-            public K next()
-            {
+            public K next() {
                 Node node = cur;
                 cur = cur.next;
                 return node.k;

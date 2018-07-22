@@ -1,7 +1,6 @@
 import org.junit.Assert;
 
-public class BinarySearchTest
-{
+public class BinarySearchTest {
 
     private int[][] nums = {
             {1, 3, 5}, {1, 3, 5}, {1, 3, 5}
@@ -16,8 +15,7 @@ public class BinarySearchTest
     };
 
     @org.junit.Test
-    public void search()
-    {
+    public void search() {
         for (int i = 0; i < nums.length; i++) {
             Assert.assertEquals(BinarySearch.search(nums[i], targets[i]), expects[i]);
         }

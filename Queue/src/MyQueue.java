@@ -1,5 +1,5 @@
-public interface MyQueue<Item> extends Iterable<Item>
-{
+public interface MyQueue<Item> extends Iterable<Item> {
+
     int size();
 
     boolean isEmpty();
