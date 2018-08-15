@@ -5,11 +5,8 @@ public class LRU<K, V> implements Iterable<K> {
 
     private Node head;
     private Node tail;
-
     private HashMap<K, Node> map;
-
     private int maxSize;
-
 
     private class Node {
 
@@ -22,7 +19,6 @@ public class LRU<K, V> implements Iterable<K> {
             this.k = k;
             this.v = v;
         }
-
     }
 
 
@@ -70,6 +66,7 @@ public class LRU<K, V> implements Iterable<K> {
         }
     }
 
+
     private void unlink(Node node) {
         Node pre = node.pre;
         node.pre = node.next;
@@ -94,9 +91,7 @@ public class LRU<K, V> implements Iterable<K> {
     public Iterator<K> iterator() {
 
         return new Iterator<K>() {
-
             private Node cur = head.next;
-
             @Override
             public boolean hasNext() {
                 return cur != tail;

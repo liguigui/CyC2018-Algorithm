@@ -26,7 +26,5 @@ public class QuickFindUF extends UF {
                 id[i] = qID;
             }
         }
-
     }
-
 }

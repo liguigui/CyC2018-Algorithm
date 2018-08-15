@@ -2,7 +2,6 @@ public class Down2UpMergeSort<T extends Comparable<T>> extends MergeSort<T> {
 
     @Override
     public void sort(T[] nums) {
-
         int N = nums.length;
         aux = (T[]) new Comparable[N];
 

@@ -28,6 +28,5 @@ public class RatioTest {
             N *= 2;
 
         }
-
     }
 }

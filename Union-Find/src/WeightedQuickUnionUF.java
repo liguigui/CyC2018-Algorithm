@@ -37,7 +37,5 @@ public class WeightedQuickUnionUF extends UF {
             id[j] = i;
             sz[i] += sz[j];
         }
-
     }
-
 }

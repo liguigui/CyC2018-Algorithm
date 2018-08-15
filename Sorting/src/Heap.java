@@ -41,7 +41,6 @@ public class Heap<T extends Comparable<T>> {
 
 
     private void sink(int k) {
-
         while (2 * k <= N) {
             int j = 2 * k;
             if (j < N && less(j, j + 1)) {

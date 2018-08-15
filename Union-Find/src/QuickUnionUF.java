@@ -12,7 +12,6 @@ public class QuickUnionUF extends UF {
             p = id[p];
         }
         return p;
-
     }
 
 
@@ -25,7 +24,5 @@ public class QuickUnionUF extends UF {
         if (pRoot != qRoot) {
             id[pRoot] = qRoot;
         }
-
     }
-
 }
