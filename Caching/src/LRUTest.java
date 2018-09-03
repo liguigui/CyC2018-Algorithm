@@ -3,6 +3,7 @@ import org.junit.Test;
 import java.util.Iterator;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 public class LRUTest {
     @Test
@@ -24,5 +25,7 @@ public class LRUTest {
         assertEquals(iterator.next(), "K4");
         assertEquals(iterator.next(), "K2");
         assertEquals(iterator.next(), "K1");
+
+        assertFalse(iterator.hasNext());
     }
 }

@@ -69,20 +69,22 @@ public class LRU<K, V> implements Iterable<K> {
 
     private void unlink(Node node) {
         Node pre = node.pre;
-        node.pre = node.next;
-        node.next = pre;
+        Node next = node.next;
+        pre.next = next;
+        next.pre = pre;
     }
 
 
     private void appendHead(Node node) {
         node.next = head.next;
+        node.pre = head;
         head.next = node;
     }
 
 
     private Node removeTail() {
         Node node = tail.pre;
-        node.pre = tail;
+        tail.pre = node.pre;
         return node;
     }
 
@@ -105,5 +107,4 @@ public class LRU<K, V> implements Iterable<K> {
             }
         };
     }
-
 }

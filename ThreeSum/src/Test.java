@@ -13,8 +13,13 @@ public class Test {
 
 
     @org.junit.Test
-    public void ThreeSumFastTest() {
-        test(new ThreeSumFast());
+    public void ThreeSumBinarySearchTest() {
+        test(new ThreeSumBinarySearch());
+    }
+
+    @org.junit.Test
+    public void TreeSumTwoPointerTest() {
+        test(new ThreeSumTwoPointer());
     }
 
 
