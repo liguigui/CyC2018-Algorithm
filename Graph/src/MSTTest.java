@@ -6,6 +6,7 @@ import java.util.Set;
 public class MSTTest {
 
     private EdgeWeighGraph graph;
+
     private Set<Edge> expect;
 
 
@@ -31,15 +32,18 @@ public class MSTTest {
         expect.add(edge3);
     }
 
+
     @org.junit.Test
     public void testPrimMST() {
         test(new PrimMST(graph));
     }
 
+
     @org.junit.Test
     public void testKruskalMST() {
         test(new KruskalMST(graph));
     }
+
 
     private void test(MST mst) {
 

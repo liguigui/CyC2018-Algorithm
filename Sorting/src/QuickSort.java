@@ -57,4 +57,10 @@ public class QuickSort<T extends Comparable<T>> extends Sort<T> {
         }
         return nums[k];
     }
+
+    public static void main(String[] args) {
+        QuickSort<Integer> sort = new QuickSort();
+        Integer[] nums = {3, 1, 6, 2, 5, 8, 4, 7};
+        sort.partition(nums, 0, 7);
+    }
 }
